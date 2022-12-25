@@ -1,25 +1,56 @@
+button {
+  font-size: 1.2rem;
+  min-width: 75px;
+  min-height: 45px;
+  margin: 2px;
+  background-color: #393b3e;
+  color: #ffffff;
+  border-width: 0px;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #313335;
+}
+button:active {
+  background-color: #26282b;
+  color: #cfcecd;
+}
+
+.BtnTw {
+  background-color: #313335;
+}
+
+.BtnTw:hover {
+  background-color: #393b3e;
+}
+
+.BtnTw:active {
+  background-color: #26282b;
+  color: #cfcecd;
+}
+
+.BtnEq {
+  background-color: #a6a5a1;
+  color: #000;
+}
+
+.BtnEq:hover {
+  background-color: #989794;
+}
+
+.BtnEq:active {
+  background-color: #8a8a87;
+  color: #454542;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -28,11 +59,119 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Frame {
+  background-color: #1d2123;
+  border-radius: 10px;
+  padding: 6px;
+  border: 1px solid #9f9f9f;
+  box-shadow: 10px 15px 25px #1d2123;
+  min-width: 316px;
+}
+
+.Screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+  align-items: flex-end;
+  padding: 0px;
+  margin-right: 5px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  min-width: 316px;
+}
+
+.ScreenResult {
+  height: 30px;
+  font-size: 0.7em;
+  color: #d9d9d9;
+}
+
+.ScreenInput {
+  height: 50px;
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.pad {
+  display: flex;
+}
+
+.Log {
+  margin: 6px;
+  margin-top: 10px;
+  border-top: 2px dotted #848280;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0px;
+  max-height: 40vh;
+  min-width: 316px;
+}
+
+.LogData {
+  align-self: flex-end;
+  min-width: 100%;
+  overflow: auto;
+}
+
+.LogTableRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.LogTableCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.LogTableOp {
+  font-size: 0.7em;
+  color: #c5c5c5;
+}
+
+.LogTableCopy {
+  display: none;
+  font-size: 0.4em;
+  font-weight: 700;
+  color: #c5c5c5;
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  height: 80%;
+  width: 30%;
+  margin: auto;
+  text-align: start;
+}
+
+.LogTableCol:hover {
+  background-color: #282c34;
+}
+
+.LogTableCol:hover .LogTableCopy {
+  display: block;
+}
+
+.LogTableCol:active {
+  background-color: #171a1c;
+}
+
+@media screen and (min-width: 730px) {
+  .Frame {
+    display: flex;
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Log {
+    margin: 6px;
+    margin-left: 10px;
+    padding-left: 5px;
+    border-top: none;
+    border-left: 1px dashed #848280;
+    max-height: 40vh;
+    min-width: 316px;
+    justify-content: start;
   }
 }
